@@ -401,8 +401,8 @@ export default function Portfolio() {
           
           {/* Resume Download Button */}
           <a 
-            href="/Lana-Alsheikh-'26.pdf" 
-            download="Lana_Alsheikh_Resume.pdf"
+            href="/Lana Alsheikh copy.pdf" 
+            download="Lana Alsheikh Resume.pdf"
             className="inline-block bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 px-6 rounded-full transition border-2 border-purple-400 mt-4 -ml-2"
             style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.5)' }}
           >
