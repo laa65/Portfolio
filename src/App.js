@@ -15,7 +15,7 @@ export default function Portfolio() {
   // Track which section is in view to highlight the active nav button
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'education', 'projects', 'experience', 'skills', 'contact'];
+      const sections = ['home', 'about', 'education', 'experience', 'projects', 'skills', 'contact'];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const sectionId of sections) {
@@ -49,7 +49,7 @@ export default function Portfolio() {
       
     <div className="min-h-screen text-white" style={{ fontFamily: "'Space Mono', monospace" }}>
       {/* Navigation bar - fixed at top */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-end gap-2 p-4 bg-black bg-opacity-50">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex flex-wrap justify-end gap-2 p-2 md:p-4 bg-black bg-opacity-50">
         {/* Navigation buttons */}
         <button
           onClick={() => scrollToSection('home')}
@@ -78,6 +78,15 @@ export default function Portfolio() {
         >
           Education
         </button>
+             <button
+          onClick={() => scrollToSection('experience')}
+          className={`px-4 py-2 rounded-full text-sm font-medium transition bg-zinc-900 text-white border-2 ${
+            activeSection === 'experience' ? 'border-purple-400' : 'border-purple-500 hover:border-purple-400'
+          }`}
+          style={{ boxShadow: activeSection === 'experience' ? '0 0 15px rgba(168, 85, 247, 0.6)' : '0 0 10px rgba(168, 85, 247, 0.3)' }}
+        >
+          Experience
+        </button>
         <button
           onClick={() => scrollToSection('projects')}
           className={`px-4 py-2 rounded-full text-sm font-medium transition bg-zinc-900 text-white border-2 ${
@@ -86,15 +95,6 @@ export default function Portfolio() {
           style={{ boxShadow: activeSection === 'projects' ? '0 0 15px rgba(168, 85, 247, 0.6)' : '0 0 10px rgba(168, 85, 247, 0.3)' }}
         >
           Projects
-        </button>
-        <button
-          onClick={() => scrollToSection('experience')}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition bg-zinc-900 text-white border-2 ${
-            activeSection === 'experience' ? 'border-purple-400' : 'border-purple-500 hover:border-purple-400'
-          }`}
-          style={{ boxShadow: activeSection === 'experience' ? '0 0 15px rgba(168, 85, 247, 0.6)' : '0 0 10px rgba(168, 85, 247, 0.3)' }}
-        >
-          Experience
         </button>
         <button
           onClick={() => scrollToSection('skills')}
@@ -126,17 +126,17 @@ export default function Portfolio() {
       </nav>
 
       {/* HOME SECTION */}
-      <section id="home" className="min-h-screen flex flex-col justify-center items-start px-16 pt-20">
-        <h1 className="text-9xl font-bold tracking-wider mb-4" style={{ fontFamily: "'VT323', monospace" }}>
+      <section id="home" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 pt-20">
+        <h1 className="text-6xl md:text-9xl font-bold tracking-wider mb-4" style={{ fontFamily: "'VT323', monospace" }}>
           HEY, I'M LANA!
         </h1>
         <p className="text-xl text-white mt-4">I build things and make data make sense.</p>
-        <p className="text-sm text-purple-200 mt-2">CS student building at the intersection of software engineering, data science, UX/UI, and AI.</p>
+        <p className="text-sm text-purple-200 mt-2">Cybersecurity • Data Analytics • Web Development • AI • UX/UI</p>
       </section>
 
       {/* ABOUT ME SECTION */}
-      <section id="about" className="min-h-screen flex flex-col justify-center items-start px-16">
-        <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>ABOUT ME</h2>
+      <section id="about" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
+        <h2 className="text-4xl md:text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>ABOUT ME</h2>
         <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
           <p className="text-lg leading-relaxed mb-4">
             I'm a computing science student with an AI concentration and a minor in statistics, primarily interested in data science. I enjoy working with data, finding patterns, and explaining insights in a way that makes information easy to understand and actionable.
@@ -151,7 +151,7 @@ export default function Portfolio() {
       </section>
 
       {/* EDUCATION SECTION */}
-      <section id="education" className="min-h-screen flex flex-col justify-center items-start px-16">
+      <section id="education" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
         <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>EDUCATION</h2>
         
         {/* Simon Fraser University */}
@@ -169,8 +169,65 @@ export default function Portfolio() {
         </div>
       </section>
 
+      
+
+      {/* EXPERIENCE SECTION */}
+      <section id="experience" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
+        <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>EXPERIENCE</h2>
+        
+        {/* Digital Risk & Resilience Analyst Co-op */}
+        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
+          <h3 className="text-2xl font-bold mb-2">Digital Risk & Resilience Analyst Co-op</h3>
+          <p className="text-sm font-semibold mb-1">Digital Risk & Cyber Security</p>
+          <p className="text-sm font-semibold mb-3">Teck Resources – Vancouver, BC | February 2026 – August 2026</p>
+          <ul className="list-disc list-inside space-y-2 text-sm">
+            <li>Created and launched Cyber Pulse, a monthly cybersecurity awareness campaign delivering threat trends, security topics, and interactive activities to employees.</li>
+            <li>Developed Power BI dashboards for leadership to track company-wide phishing simulation results, SAT metrics, departmental performance, and progress toward cybersecurity KPIs.</li>
+            <li>Contributed to Business Impact Analysis (BIA) and enterprise resilience planning, assessing critical functions and recovery priorities</li>
+            <li>Analyzed phishing results to identify behavioral patterns and recommended targeted security awareness training and advisories</li>
+          </ul>
+        </div>
+
+        {/* UX/UI & Website Development */}
+        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
+          <h3 className="text-2xl font-bold mb-2">UX/UI & Website Development</h3>
+          <p className="text-sm font-semibold mb-1"><a href="https://www.mealvue.online" target="_blank" rel="noopener noreferrer" className="text-purple-400 underline hover:text-purple-300">MeAIvue</a> - Riipen</p>
+          <p className="text-sm font-semibold mb-3">January 2026 – March 2026</p>
+          <ul className="list-disc list-inside space-y-2 text-sm">
+            <li>Conducted UX/UI audit using Nielsen's heuristics, identifying usability gaps and system behavior issues</li>
+            <li>Designed a complete UI overhaul in Figma, improving usability and visual consistency</li>
+            <li>Redesigned the website to align with app branding, enhancing user experience and visual cohesion</li>
+          </ul>
+        </div>
+
+        {/* Computing Science Peer Tutor */}
+        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
+          <h3 className="text-2xl font-bold mb-2">Computing Science Peer Tutor (Educator)</h3>
+          <p className="text-sm font-semibold mb-3">School of Computing Science - Simon Fraser University | Curent</p>
+          <ul className="list-disc list-inside space-y-2 text-sm">
+            <li>Assisted with debugging C++ and Python programs</li>
+            <li>Explained data structures, algorithms, and discrete math concepts clearly to CS students</li>
+            <li>Strengthened communication and technical problem-solving skills</li>
+          </ul>
+        </div>
+
+        {/* Stuffies Pastries */}
+        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
+          <h3 className="text-2xl font-bold mb-2">Stuffies Pastries</h3>
+          <p className="text-sm font-semibold mb-3">METROPOLIS AT METROTOWN | MAY 2023 - JULY 2024</p>
+          <ul className="list-disc list-inside space-y-2 text-sm">
+            <li>Provided front-line customer service in a fast-paced environment.</li>
+            <li>Worked efficiently under pressure while multitasking.</li>
+            <li>Supported daily opening and closing duties.</li>
+            <li>Consistently met or exceeded daily sales goals.</li>
+            <li>Handled cash transactions and operated the POS system efficiently.</li>
+            <li>Prepared and served specialty drinks, pastries, and ice cream.</li>
+          </ul>
+        </div>
+      </section>
+
       {/* PROJECTS SECTION */}
-      <section id="projects" className="min-h-screen flex flex-col justify-center items-start px-16">
+      <section id="projects" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
         <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>PROJECTS</h2>
           {/* Gender Traits Project */}
           <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
@@ -234,58 +291,15 @@ export default function Portfolio() {
           </div>
       </section>
 
-      {/* EXPERIENCE SECTION */}
-      <section id="experience" className="min-h-screen flex flex-col justify-center items-start px-16">
-        <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>EXPERIENCE</h2>
-        
-        {/* Computing Science Peer Tutor */}
-        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
-          <h3 className="text-2xl font-bold mb-2">Computing Science Peer Tutor (Educator)</h3>
-          <p className="text-sm font-semibold mb-3">School of Computing Science - Simon Fraser University | Curent</p>
-          <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>Assisted with debugging C++ and Python programs</li>
-            <li>Explained data structures, algorithms, and discrete math concepts clearly to CS students</li>
-            <li>Strengthened communication and technical problem-solving skills</li>
-          </ul>
-        </div>
-
-        {/* Stuffies Pastries */}
-        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl mb-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
-          <h3 className="text-2xl font-bold mb-2">Stuffies Pastries</h3>
-          <p className="text-sm font-semibold mb-3">METROPOLIS AT METROTOWN | MAY 2023 - JULY 2024</p>
-          <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>Provided front-line customer service in a fast-paced environment.</li>
-            <li>Worked efficiently under pressure while multitasking.</li>
-            <li>Supported daily opening and closing duties.</li>
-            <li>Consistently met or exceeded daily sales goals.</li>
-            <li>Handled cash transactions and operated the POS system efficiently.</li>
-            <li>Prepared and served specialty drinks, pastries, and ice cream.</li>
-          </ul>
-        </div>
-
-        {/* CVS Data Entry Operator */}
-        <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
-          <h3 className="text-2xl font-bold mb-2">CVS Data Entry Operator</h3>
-          <p className="text-sm font-semibold mb-3">JULY 2022 - AUGUST 2022</p>
-          <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>Worked efficiently under pressure while multitasking.</li>
-            <li>Entered and maintained accurate records using Microsoft Excel.</li>
-            <li>Managed and organized applicant data with strong attention to detail.</li>
-            <li>Verified information accuracy and met strict deadlines.</li>
-            <li>Typing speed and accuracy, Attention to detail, and Organization skills.</li>
-          </ul>
-        </div>
-      </section>
-
       {/* SKILLS SECTION */}
-      <section id="skills" className="min-h-screen flex flex-col justify-center items-start px-16">
+      <section id="skills" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
         <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>SKILLS</h2>
         
         <div className="grid grid-cols-2 gap-6 w-full max-w-5xl">
           {/* Languages */}
           <div className="bg-zinc-900 text-white rounded-3xl p-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
             <h3 className="text-2xl font-bold mb-4">Languages</h3>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
               <ul className="list-disc list-inside space-y-1 text-sm">
                 <li>Python</li>
                 <li>C</li>
@@ -296,6 +310,7 @@ export default function Portfolio() {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>SQL</li>
+                <li>TypeScript (TSX)</li>
               </ul>
             </div>
           </div>
@@ -303,7 +318,7 @@ export default function Portfolio() {
           {/* Development Tools */}
           <div className="bg-zinc-900 text-white rounded-3xl p-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
             <h3 className="text-2xl font-bold mb-4">Tools & Systems</h3>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
               <ul className="list-disc list-inside space-y-1 text-sm">
                 <li>Git</li>
                 <li>GitHub</li>
@@ -322,7 +337,7 @@ export default function Portfolio() {
           {/* Libraries */}
           <div className="bg-zinc-900 text-white rounded-3xl p-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
             <h3 className="text-2xl font-bold mb-4">Data & ML</h3>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
               <ul className="list-disc list-inside space-y-1 text-sm">
                 <li>Numpy</li>
                 <li>Pandas</li>
@@ -339,7 +354,7 @@ export default function Portfolio() {
       </section>
 
       {/* COURSES SECTION */}
-      <section id="courses" className="min-h-screen flex flex-col justify-center items-start px-16">
+      <section id="courses" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
         <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>RELEVANT COURSES</h2>
         
         <div className="grid grid-cols-3 gap-6 w-full">
@@ -349,8 +364,6 @@ export default function Portfolio() {
             <ul className="list-disc list-inside space-y-2 text-sm">
               <li>Data Structures and Algorithms (CMPT 307)</li>
               <li>Computation Data Science (CMPT 353)</li>
-              <li>Quantum Algorithms (CMPT 476)</li>
-              <li>Biomedical Image Computing (CMPT 419)</li>
               <li>Machine Learning (CMPT 410)</li>
             </ul>
           </div>
@@ -359,7 +372,6 @@ export default function Portfolio() {
           <div className="bg-zinc-900 text-white rounded-3xl p-6 border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
             <h3 className="text-2xl font-bold mb-4">Statistics</h3>
             <ul className="list-disc list-inside space-y-2 text-sm">
-              <li>Applied Multivariate Analysis (STAT 445)</li>
               <li>Analysis of Experimental & Observational Data (STAT 302)</li>
               <li>R Language</li>
             </ul>
@@ -379,7 +391,7 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="min-h-screen flex flex-col justify-center items-start px-16">
+      <section id="contact" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
         <h2 className="text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>CONTACT</h2>
         <div className="bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
           <p className="text-lg mb-4">Get in touch with me!</p>
