@@ -360,18 +360,21 @@ export default function Portfolio() {
 
       {/* ABOUT ME SECTION */}
       <section id="about" className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 py-10 md:py-20">
-        <h2 className="text-4xl md:text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>ABOUT ME</h2>
-        <div className="hover-card bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
-          <p className="text-lg leading-relaxed mb-4">
-            I'm a computing science student with an AI concentration and a minor in statistics, primarily interested in data science. I enjoy working with data, finding patterns, and explaining insights in a way that makes information easy to understand and actionable.
-          </p>
-          <p className="text-lg leading-relaxed mb-4">
-            I also learn UX/UI on the side because I love the creative and visual side of building intuitive experiences, and I'm fascinated by how AI technology continues to evolve and shape the future.
-          </p>
-          <p className="text-lg leading-relaxed">
-            I enjoy solving problems, simplifying complex ideas, and creating solutions that make sense both technically and visually. I'm currently seeking internships in data science, software development, or UX roles.
-          </p>
-        </div>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8" style={{ fontFamily: "'VT323', monospace" }}>ABOUT ME</h2>
+              <div className="hover-card bg-zinc-900 text-white rounded-3xl p-8 w-full max-w-5xl border-2 border-purple-500" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)' }}>
+                <p className="text-lg leading-relaxed mb-4">
+                  I'm curious about what happens behind the screen — the data, the systems, the risks, and the experience people ultimately interact with.
+                </p>
+                <p className="text-lg leading-relaxed mb-4">
+                  As a 4th-year Computing Science student specializing in AI and minoring in Statistics, I've explored that curiosity through data science, cybersecurity, and UX/UI. I enjoy digging into complex problems, finding patterns, and turning what I learn into clear, usable solutions.
+                </p>
+                <p className="text-lg leading-relaxed mb-4">
+                  I'm also pursuing the Google Cybersecurity Professional Certificate and looking for opportunities in data science, cybersecurity, and software development.
+                </p>
+                <p className="text-lg leading-relaxed font-semibold text-purple-300">
+                  The "why" gets me curious. The "how" gets me building.
+                </p>
+              </div>
       </section>
 
       {/* EDUCATION SECTION */}
@@ -506,33 +509,6 @@ export default function Portfolio() {
             <li>Translated functional requirements into wireflows and system logic</li>
             <li>Coordinated deliverables across team members using Agile practices </li>
             <li>Conducted benchmarking research and co-authored key report sections</li>
-          </ul>
-        </div>
-
-        {/* Discover Jordan Landing Page */}
-        <div className="project-card bg-zinc-900 text-white rounded-2xl p-6 md:p-8 w-full max-w-5xl mb-5">
-          <span className="project-num">05</span>
-          <h3 className="text-2xl font-bold mb-2">Discover Jordan Landing Page Design</h3>
-          <p className="text-sm font-semibold mb-3 text-purple-300">Figma | 2024 | <a href="https://www.figma.com/proto/n6LMKDsyIATLOvSGjpGapw/Jordan?node-id=1-2&t=AfYJwd2qZdeQYQup-1" target="_blank" rel="noopener noreferrer" className="text-purple-400 underline hover:text-purple-200">Mockup</a></p>
-          <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>Created a user-friendly landing page for tourists exploring Jordan</li>
-            <li>Included culture, top destinations, tips, and traditions. Highlighted unique attractions and reasons to visit Jordan</li>
-            <li>Designed to guide visitors with intuitive navigation and compelling visuals</li>
-            <li>Showcased Jordanian cuisine, art, and culture to inspire travel interest</li>
-          </ul>
-        </div>
-
-        {/* Margot - AI Color Stylist */}
-        <div className="project-card bg-zinc-900 text-white rounded-2xl p-6 md:p-8 w-full max-w-5xl mb-5">
-          <span className="project-num">06</span>
-          <h3 className="text-2xl font-bold mb-2">Margot - AI Color Stylist</h3>
-          <p className="text-sm font-semibold mb-3 text-purple-300">Canva | July 2024 | <a href="https://appadvice.com/app/margot-ai-color-stylist/6505045671.amp" target="_blank" rel="noopener noreferrer" className="text-purple-400 underline hover:text-purple-200">Website</a></p>
-          <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>Created multiple logo designs with a colorful background and the letter "M" using Canva</li>
-            <li>Collaborated with developers to refine and align designs with the app's brand</li>
-            <li>Explored various color schemes and typography to match the app's aesthetic</li>
-            <li>Managed project timelines to meet the app's development schedule</li>
-            <li>Adapted the logo design for different screen sizes and devices</li>
           </ul>
         </div>
       </section>
